@@ -45,6 +45,9 @@ services:
       # - ./database:/directus/database
       # If you want to load extensions from the host
       # - ./extensions:/directus/extensions
+
+      - ./directus/extensions/authentication_hook/dist/:/directus/extensions/hooks/authentication_hook
+      - ./directus/snapshots/:/directus/snapshots
     networks:
       - directus
     depends_on:
